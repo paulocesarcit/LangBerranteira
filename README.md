@@ -1,7 +1,10 @@
 # LangBerranteira
 Uma linguagem matadora de Onça, é verdade não minto!
 
+# POSSIVEIS DEPENDENCIAS PRA USAR
+- [Executar arquivo pronto](https://nodejs.org/api/child_process.html#child_process_child_process_exec_command_options_callback)
 
+# Documentação
 |FRASES|C|
 |---|---|
 |SO SERJÃ(A)O BERRANTERO|int main(void){|
