@@ -1,10 +1,10 @@
-module.exports = function (codeSB) {
-    //a regex (?=(?:[^"]|"[^"]*")*$) evita que sejam substituido os valores dentro de aspas.
-    var code = codeSB;
+module.exports = function (convert) {
+    //O regex (?=(?:[^"]|"[^"]*")*$) evita que sejam substituido os valores dentro de aspas.
+    var code = convert;
 
     if (code == null) return "";
 
-    //MAIN
+    //MÁIN
     code = code.replace(/(SO SERJ[AÃ]O BERRANTERO)(?=(?:[^"]|"[^"]*")*$)/g, 'int main (void) {'); 
     //}
     code = code.replace(/(PARA MEU BERRANTE TOCAR)(?=(?:[^"]|"[^"]*")*$)/g, '}');
@@ -40,8 +40,8 @@ module.exports = function (codeSB) {
     code = code.replace(/(FERA)(?=(?:[^"]|"[^"]*")*$)/g, 'float');
     code = code.replace(/(DAQUELE JEITO)(?=(?:[^"]|"[^"]*")*$)/g, 'unsigned');
 
-    //Colocando as bibliotecas
-    code = "#include <stdio.h>\n#include <math.h>\n\n" + code;
+    //ADICIONA O STDIO E O IOSTREAM
+    code = "#include <stdio.h>\n#include <math.h>\n#include <iostream>\n\n" + code;
 
     console.log ('COMPILADO: ');
     console.log (code);
