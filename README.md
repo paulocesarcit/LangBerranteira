@@ -22,7 +22,7 @@ Uma linguagem matadora de Onça, é verdade não minto!
 |TIPO DE DADOS||
 |---|---|
 |BERRANTE|char|
-|ON(CÇ)|int|
+|ON(CÇ)A|int|
 |SHORT|short|
 |LONG|long|
 |PINTADA BRABA|double|

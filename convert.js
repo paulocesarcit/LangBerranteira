@@ -1,6 +1,6 @@
 module.exports = function (convert) {
     //O regex (?=(?:[^"]|"[^"]*")*$) evita que sejam substituido os valores dentro de aspas.
-    var code = convert
+    let code = convert
 
     console.log(code)
 

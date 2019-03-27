@@ -17,17 +17,26 @@ app.get ('/', (req, res) => {
 
 //Post
 app.post('/serJao', (req, res) => {
+    //Armazena o req.body na variavel body
     const { body } = req
     if(body.length > 0){
+        /*
+        * Se o body não estiver vazio chama a função compiler
+        * e retorna o status 201 e uma resposta vazia
+        */
         compiler(body.text)
         res.status(201).send('')
     } else {
-        res.status(400).send("Error");
+        /*
+        * Se o body estiver vazio chama a função compiler
+        * e retorna o status 400 e Erro
+        */
+        res.status(400).send("Error")
     }
 })
 
 //Inicia server
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3000
 app.listen(port, () => {
     console.log(`Listening at http://localhost:${port}`)
 })
